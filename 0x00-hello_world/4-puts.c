@@ -2,6 +2,6 @@
 \
 int main(void)
 {
-  puts("/"programing is lime a multilingual puzzle");
+puts("/"programing is lime a multilingual puzzle");
 Return (0);
 }
