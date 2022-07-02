@@ -1,35 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all possible different combinations of two digit
+ * main - entry point of the program
  *
- * Return: returns 0 as success
- *
+ * Return: return 0 as success
  */
 
 int main(void)
 {
-	int n;
-	int t;
+  char alp[26] = "abcdefghijklmnopqrstuvwxyz";
+  int i;
 
-	for (n = 48; n < 58; n++)
-	{
-		for (t = 49; t < 58; t++)
-		{
-			putchar(n);
-			putchar(t);
-
-			if (n == 56 && t == 57)
-			{
-				break;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-	putchar(',');
-	return (0);
+  for (i = 0; i < 26; i++)
+    {
+      putchar(alp[i]);
+    }
+  putchar('\n');
+  return (0);
 }
