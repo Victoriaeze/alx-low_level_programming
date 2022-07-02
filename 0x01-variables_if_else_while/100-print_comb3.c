@@ -1,35 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - program that prints all possible different combinations of two digit
- *
- * Return: returns 0 as success
- *
+ *main -> assign a random number to the variable n each time it is executed
+ *and print the last digit of the number stored in the variable n
+ *Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int n;
-	int t;
+int ch;
+int n;
+for (ch = 48; ch <= 57; ch++)
+{
+for (n = 49; n <= 57; n++)
+{
+if (n > ch)
+{
+putchar(ch);
+putchar(n);
+if (ch != 56 || n != 57)
+{
+putchar(44);
+putchar(32);
+}
+}
+}
+}
 
-	for (n = 48; n < 58; n++)
-	{
-		for (t = 49; t < 58; t++)
-		{
-			putchar(n);
-			putchar(t);
+putchar(10); /* this is an ascii code for new line*/
 
-			if (n == 56 && t == 57)
-			{
-				break;
-			}
-			else
-			{
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-	putchar(',');
-	return (0);
+return (0);
 }
