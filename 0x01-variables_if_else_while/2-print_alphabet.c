@@ -1,16 +1,20 @@
 #include <stdio.h>
+
 /**
- *main -> assign a random number to the variable n each time it is executed
- *and print the last digit of the number stored in the variable n
- *Return: Always 0 (Success)
+ * main - entry point of the program
+ *
+ * Return: return 0 as success
  */
+
 int main(void)
 {
-    int ch;
-    for (ch = 97; ch <= 122; ch++)
-    {
-        putchar(ch);
-    }
-    putchar(10); /* this is an ascii code for new line*/
-    return (0);
+	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
+
+	for (i = 0; i < 26; i++)
+	{
+		putchar(alp[i]);
+	}
+	putchar('\n');
+	return (0);
 }
